@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
                         color = MaterialTheme.colors.background
                 ) {
                     MessageCard(
-                            msg = Message("Walker", "Krispky scheme")
+                        msg = Message("Daffy Duck", "Encora Jobs")
                     )
                 }
             }
@@ -48,13 +48,13 @@ fun MessageCard(msg: Message) {
     // Add padding around our message
     Row(modifier = Modifier.padding(all = 8.dp)) {
         Image(
-                painter = painterResource(R.drawable.pet_profile),
-                contentDescription = "Contact profile picture",
-                modifier = Modifier
-                        // Set image size to 40 dp
-                        .size(50.dp)
-                        // Clip image to be shaped as a circle
-                        .clip(CircleShape)
+            painter = painterResource(R.drawable.duck_profile),
+            contentDescription = "Contact profile picture",
+            modifier = Modifier
+                // Set image size to 40 dp
+                .size(50.dp)
+                // Clip image to be shaped as a circle
+                .clip(CircleShape)
         )
 
         // Add a horizontal space between the image and the column
