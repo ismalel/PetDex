@@ -15,7 +15,6 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.ismalel.petdex.data.entity.Message
@@ -27,11 +26,11 @@ class MainActivity : ComponentActivity() {
             PetDexTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = Color.Red
+                        modifier = Modifier.fillMaxSize(),
+                        color = MaterialTheme.colors.background
                 ) {
                     MessageCard(
-                        msg = Message("Walker", "Krispky scheme")
+                            msg = Message("Walker", "Krispky scheme")
                     )
                 }
             }
@@ -49,22 +48,22 @@ fun MessageCard(msg: Message) {
     // Add padding around our message
     Row(modifier = Modifier.padding(all = 8.dp)) {
         Image(
-            painter = painterResource(R.drawable.pet_profile),
-            contentDescription = "Contact profile picture",
-            modifier = Modifier
-                // Set image size to 40 dp
-                .size(40.dp)
-                // Clip image to be shaped as a circle
-                .clip(CircleShape)
+                painter = painterResource(R.drawable.pet_profile),
+                contentDescription = "Contact profile picture",
+                modifier = Modifier
+                        // Set image size to 40 dp
+                        .size(50.dp)
+                        // Clip image to be shaped as a circle
+                        .clip(CircleShape)
         )
 
         // Add a horizontal space between the image and the column
-        Spacer(modifier = Modifier.width(8.dp))
+        Spacer(modifier = Modifier.width(10.dp))
 
         Column {
             Text(text = msg.author)
             // Add a vertical space between the author and message texts
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(6.dp))
             Text(text = msg.body)
         }
     }
@@ -74,6 +73,6 @@ fun MessageCard(msg: Message) {
 @Composable
 fun PreviewMessageCard() {
     MessageCard(
-        msg = Message("Ismael", "Krispky kreme")
+            msg = Message("Ismael", "Krispky kreme")
     )
 }
