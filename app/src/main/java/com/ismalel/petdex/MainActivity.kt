@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     MessageCard(
-                        msg = Message("Ismael", "Krispky kreme")
+                        msg = Message("Walker", "Krispky scheme")
                     )
                 }
             }
@@ -40,7 +40,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    Text(text = "Bai $name!")
 }
 
 @Composable
