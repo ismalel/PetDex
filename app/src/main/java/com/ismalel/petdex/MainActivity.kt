@@ -63,6 +63,8 @@ fun MessageCard(msg: Message) {
 
         Column {
             Text(text = msg.author)
+
+            // New comment
             // Add a vertical space between the author and message texts
             Spacer(modifier = Modifier.height(6.dp))
             Text(text = msg.body)
