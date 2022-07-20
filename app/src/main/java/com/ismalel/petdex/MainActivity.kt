@@ -15,6 +15,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.ismalel.petdex.data.entity.Message
@@ -27,7 +28,7 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                         modifier = Modifier.fillMaxSize(),
-                        color = MaterialTheme.colors.background
+                        color = Color.Gray
                 ) {
                     MessageCard(
                         msg = Message("Daffy Duck", "Encora Jobs")
